@@ -1,8 +1,8 @@
 <?php
  class Conexion{
      public static function Conectar(){
-         define('servidor','localhost');
-         define('nombre_bd','login_2019');
+         define('servidor','127.0.0.1');
+         define('nombre_bd','proyectofinal');
          define('usuario','root');
          define('password','');         
          $opciones = array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8');

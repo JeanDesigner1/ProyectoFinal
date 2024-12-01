@@ -7,11 +7,11 @@
     
     
  <?php
-include_once '/bd/conexion.php';
+include_once'../bd/conexion.php';
 $objeto = new Conexion();
 $conexion = $objeto->Conectar();
 
-$consulta = "SELECT id, nombre, pais, edad FROM personas";
+$consulta = "SELECT id, nombre, stock, price FROM productos";
 $resultado = $conexion->prepare($consulta);
 $resultado->execute();
 $data=$resultado->fetchAll(PDO::FETCH_ASSOC);
@@ -35,9 +35,9 @@ $data=$resultado->fetchAll(PDO::FETCH_ASSOC);
                             <tr>
                                 <th>Id</th>
                                 <th>Nombre</th>
-                                <th>País</th>                                
-                                <th>Edad</th>  
-                                <th>Acciones</th>
+                                <th>Stock</th>                                
+                                <th>Price</th>  
+                                <th>Opciones</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -47,8 +47,9 @@ $data=$resultado->fetchAll(PDO::FETCH_ASSOC);
                             <tr>
                                 <td><?php echo $dat['id'] ?></td>
                                 <td><?php echo $dat['nombre'] ?></td>
-                                <td><?php echo $dat['pais'] ?></td>
-                                <td><?php echo $dat['edad'] ?></td>    
+                                <td><?php echo $dat['stock'] ?></td>
+                                <td><?php echo $dat['price'] ?></td> 
+                                   
                                 <td></td>
                             </tr>
                             <?php
@@ -77,11 +78,11 @@ $data=$resultado->fetchAll(PDO::FETCH_ASSOC);
                 <input type="text" class="form-control" id="nombre">
                 </div>
                 <div class="form-group">
-                <label for="pais" class="col-form-label">País:</label>
+                <label for="pais" class="col-form-label">Stock:</label>
                 <input type="text" class="form-control" id="pais">
                 </div>                
                 <div class="form-group">
-                <label for="edad" class="col-form-label">Edad:</label>
+                <label for="edad" class="col-form-label">Price:</label>
                 <input type="number" class="form-control" id="edad">
                 </div>            
             </div>

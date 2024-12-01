@@ -9,7 +9,7 @@ $('#formLogin').submit(function(e){
           title:'Debe ingresar un usuario y/o password',
       });
       return false; 
-    }else{
+    }else {
         $.ajax({
            url:"bd/login.php",
            type:"POST",

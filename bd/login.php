@@ -1,30 +1,31 @@
 <?php
+
 session_start();
 
 include_once 'conexion.php';
 $objeto = new Conexion();
 $conexion = $objeto->Conectar();
 
-//recepción de datos enviados mediante POST desde ajax
+// Recepción de datos enviados mediante POST desde ajax
 $usuario = (isset($_POST['usuario'])) ? $_POST['usuario'] : '';
 $password = (isset($_POST['password'])) ? $_POST['password'] : '';
 
-$pass = md5($password); //encripto la clave enviada por el usuario para compararla con la clava encriptada y almacenada en la BD
+$pass = md5($password); // Encriptar la clave enviada por el usuario
 
-$consulta = "SELECT * FROM usuarios WHERE usuario='$usuario' AND password='$pass' ";
+$consulta = "SELECT * FROM admins WHERE usuario='$usuario' AND password='$pass'";
 $resultado = $conexion->prepare($consulta);
 $resultado->execute();
 
-if($resultado->rowCount() >= 1){
-    $data = $resultado->fetchAll(PDO::FETCH_ASSOC);
-    $_SESSION["s_usuario"] = $usuario;
-}else{
-    $_SESSION["s_usuario"] = null;
-    $data=null;
+if($resultado->rowCount() >= 1) {
+    $data = $resultado->fetch(PDO::FETCH_ASSOC); // Obtén la información del usuario
+    $_SESSION["s_usuario"] = $usuario;  // Establece la sesión
+    echo json_encode($data); // Enviar los datos en formato JSON
+} else {
+    $_SESSION["s_usuario"] = null; // No se encontró usuario
+    echo json_encode(null); // Enviar null si no se encuentra el usuario
 }
 
-print json_encode($data);
-$conexion=null;
+$conexion = null;
 
 //usuarios de pruebaen la base de datos
 //usuario:admin pass:12345

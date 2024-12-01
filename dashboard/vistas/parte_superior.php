@@ -44,10 +44,8 @@ if($_SESSION["s_usuario"] === null){
 
       <!-- Sidebar - Brand -->
       <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
-        <div class="sidebar-brand-icon rotate-n-15">
-          <i class="fas fa-laugh-wink"></i>
-        </div>
-        <div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
+        
+        <div class="sidebar-brand-text mx-3">Stock Control <sup></sup></div>
       </a>
 
       <!-- Divider -->
@@ -57,7 +55,7 @@ if($_SESSION["s_usuario"] === null){
       <li class="nav-item active">
         <a class="nav-link" href="index.php">
           <i class="fas fa-fw fa-tachometer-alt"></i>
-          <span>Dashboard</span></a>
+          <span>Inicio</span></a>
       </li>
 
       <!-- Divider -->
@@ -65,20 +63,26 @@ if($_SESSION["s_usuario"] === null){
 
       <!-- Heading -->
       <div class="sidebar-heading">
-        Interface
+        Crud
       </div>
 
       <!-- Nav Item - Pages Collapse Menu -->
       <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
           <i class="fas fa-fw fa-cog"></i>
-          <span>Components</span>
+          <span>Dashboard</span>
         </a>
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Custom Components:</h6>
-            <a class="collapse-item" href="buttons.php">Buttons</a>
-            <a class="collapse-item" href="cards.php">Cards</a>
+            <h6 class="collapse-header">Menu:</h6>
+            <a class="collapse-item" href="ventas.php">Ventas</a>
+            <a class="collapse-item" href="analisis.php">Analisis</a>
+            <a class="collapse-item" href="devoluciones.php">Devoluciones</a>
+            <a class="collapse-item" href="mis_productos.php">Mis Productos</a>
+            <a class="collapse-item" href="editar_perfil.php">Editar Perfil</a>
+            <a class="collapse-item" href="agregar_perfil.php">Agregar Perfil</a>
+            <a class="collapse-item" href="eliminar_perfil.php">Eliminar Perfil</a>
+            <a class="collapse-item" href="Proveedores.php">Proveedores</a>
           </div>
         </div>
       </li>

@@ -28,29 +28,29 @@ SET time_zone = "+00:00";
 -- Estructura de tabla para la tabla `personas`
 --
 
-CREATE TABLE `personas` (
+CREATE TABLE `productos` (
   `id` int(11) NOT NULL,
   `nombre` varchar(50) COLLATE utf8_spanish_ci NOT NULL,
-  `pais` varchar(50) COLLATE utf8_spanish_ci NOT NULL,
-  `edad` int(11) NOT NULL
+  `stock` int(11) NOT NULL,
+  `price` int(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
 -- Volcado de datos para la tabla `personas`
 --
 
-INSERT INTO `personas` (`id`, `nombre`, `pais`, `edad`) VALUES
-(1, 'María', 'Colombia', 52),
-(2, 'Jorge', 'Argentina', 48),
-(3, 'Silvia', 'Venezuela', 25),
-(4, 'Ramiro Perez', 'Uruguay', 35),
-(5, 'Carlos', 'Colombia', 28),
-(6, 'Cristian', 'Francia', 22),
-(7, 'Roberto', 'Perú', 20),
-(8, 'Mauricio', 'Venezuela', 41),
-(9, 'Karina', 'México', 30),
-(10, 'José', 'Chile', 19),
-(11, 'Beatriz', 'Colombia', 25);
+INSERT INTO `productos` (`id`, `nombre`, `stock`, `price`) VALUES
+(1, 'Samsung Galaxy S23', 52, 799),
+(2, 'iPhone 14', 48, 999),
+(3, 'Google Pixel 8', 25, 749),
+(4, 'OnePlus 11', 35, 699),
+(5, 'Xiaomi Mi 13', 28, 649),
+(6, 'Sony Xperia 1 IV', 22, 1099),
+(7, 'Motorola Edge 40', 20, 599),
+(8, 'Oppo Find X6', 41, 849),
+(9, 'Huawei P60 Pro', 30, 1099),
+(10, 'Realme GT 2 Pro', 19, 749),
+(11, 'Asus ROG Phone 6', 25, 999);
 
 --
 -- Índices para tablas volcadas
@@ -59,7 +59,7 @@ INSERT INTO `personas` (`id`, `nombre`, `pais`, `edad`) VALUES
 --
 -- Indices de la tabla `personas`
 --
-ALTER TABLE `personas`
+ALTER TABLE `productos`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -69,7 +69,7 @@ ALTER TABLE `personas`
 --
 -- AUTO_INCREMENT de la tabla `personas`
 --
-ALTER TABLE `personas`
+ALTER TABLE `productos`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 COMMIT;
 
