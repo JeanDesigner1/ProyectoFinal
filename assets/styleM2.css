@@ -5,14 +5,14 @@
 
 
 header{
-  width: 100%;
+ 
   height: 100px;
-  font-family: 'Poppins', sans-serif;
   position: fixed;
   top: 0;
   right: 0;
   z-index: 100;
   transition: all 300ms;
+  
 }
 
 .container__header{
@@ -190,6 +190,7 @@ nav ul li a{
   display: flex;
   align-items: center;
   justify-content: space-between;
+  overflow: auto
 }
 
 .form-content .login-form,
@@ -325,5 +326,13 @@ nav ul li a{
 
   .container #flip:checked ~ .forms .login-form {
     display: none;
+  }
+}
+
+/*--- Para dispositivos small responsive ---*/
+
+@media (max-width: 576px) {
+  .wrap-login {
+    padding: 77px 15px 33px 15px;
   }
 }

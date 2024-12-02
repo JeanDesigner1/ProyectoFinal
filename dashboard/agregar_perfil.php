@@ -2,7 +2,7 @@
 
 <!--INICIO del cont principal-->
 <div class="container">
-    <h1>Página de ventas</h1>
+    <h1>Página de Agregar Perfil</h1>
 </div>
 <!--FIN del cont principal-->
 

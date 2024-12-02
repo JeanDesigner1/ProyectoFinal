@@ -19,83 +19,108 @@
         
     </head>
     <body>
-     
     <header id="header">
+  <section class="price">   
+    <ul><a href="#modal1" class="price__cta">Términos y Condiciones</a></ul>
+    <ul><a href="#modal2" class="price__cta">Contáctenos</a></ul>
+    <ul><a href="#modal3" class="price__cta">Acerca De</a></ul>
 
-<section class="price">   
-  <ul>  <a href="#modal1" class="price__cta"> Información </a> </ul>
-  <div id="modal1" class="modalmask">
-      <div class="modalbox movedown">
-          <a href="#close" title="Close" class="close"> X </a>
+    <div class="modals-container"> <!-- Contenedor de las modales -->
+      <!-- Modal 1 -->
+      <div id="modal1" class="modalmask">
+        <div class="modalbox movedown">
+          <a href="#close" title="Close" class="close">X</a>
           <div class="wrapper">
-            <header>Pure CSS Tabs</header>
-            <input type="radio" name="slider" checked id="home">
-            <nav>
-              <label for="home" class="home"><i class="fas fa-home"></i>Home</label>
-            </nav>    
+            <header>Stock Control</header>
             <section>
               <div class="content content-1">
-                <div class="title">This is a Home content</div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero aspernatur nobis provident dolores molestias quia quisquam laborum, inventore quis, distinctioa, fugit repudiandae delectus sunt ipsam! Odio illo at quia doloremque fugit iops, asperiores? Consectetur esse officia labore voluptatum blanditiis molestias dic voluptas est, minima unde sequi, praesentium dicta suscipit quisquam iure sed, nemo.</p>
+                <div class="title">Políticas de Privacidad<br><br>
+                Fecha de última actualización: 2/12/2024</div>
+                <p><br><br>
+1. Introducción
+Bienvenido a Stock Control. Estamos comprometidos a proteger la privacidad de nuestros usuarios y asegurar la confidencialidad de la información que recopilamos. Esta Política de Privacidad explica cómo recopilamos, utilizamos y protegemos tu información cuando usas nuestra plataforma de gestión de inventarios.
+<br><br>
+2. Información que Recopilamos
+Recopilamos los siguientes tipos de información:
+Información Personal: Esto incluye tu nombre, dirección de correo electrónico y cualquier otra información que proporciones al registrarte en nuestra plataforma.
+Información de la Empresa: Incluye detalles de tu empresa, como nombre, dirección, datos fiscales y otros datos relacionados con el negocio.
+Datos del Inventario: Registramos los detalles de los productos, inventario disponible, precios, proveedores y otros datos relacionados con la gestión de inventarios.
+Información de Uso: Información sobre cómo utilizas nuestra plataforma, como las funciones que accedes y la frecuencia de uso.
+<br><br>
+3. Uso de la Información
+Utilizamos tu información para los siguientes fines:
+<br><br>
+Operación de la Plataforma: Para permitirte gestionar tus inventarios, actualizar registros y realizar otras actividades relacionadas con la administración de inventarios.
+Soporte al Cliente: Para brindarte asistencia y soporte técnico en caso de problemas.
+Mejora de los Servicios: Para analizar patrones de uso y mejorar la funcionalidad y la experiencia del usuario en nuestra plataforma.
+Comunicación: Para enviarte actualizaciones, notificaciones y otra información relevante a tu cuenta y uso de nuestra plataforma.
+<br><br>
+4. Compartición de Información
+No compartimos tu información personal con terceros, excepto en los siguientes casos:
+<br><br>
+Proveedores de Servicios: Trabajamos con empresas que nos proporcionan servicios tecnológicos, como almacenamiento de datos y análisis, y les proporcionamos acceso a la información solo en la medida necesaria para prestar sus servicios.
+Obligaciones Legales: Podemos compartir información cuando sea requerido por la ley o en respuesta a un proceso legal, orden judicial u otra solicitud gubernamental.
+<br><br>
+</p>
               </div>
             </section>
           </div>
-      </div>
-    </div>
-</div>
-
-</div>
-
-<ul>  <a href="#modal1" class="price__cta"> Información </a> </ul>
-<div id="modal1" class="modalmask">
-    <div class="modalbox movedown">
-        <a href="#close" title="Close" class="close"> X </a>
-        <div class="wrapper">
-          <header>Pure CSS Tabs</header>
-          <input type="radio" name="slider" checked id="home">
-          <nav>
-            <label for="home" class="home"><i class="fas fa-home"></i>Home</label>
-          </nav>    
-          <section>
-            <div class="content content-1">
-              <div class="title">This is a Home content</div>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero aspernatur nobis provident dolores molestias quia quisquam laborum, inventore quis, distinctioa, fugit repudiandae delectus sunt ipsam! Odio illo at quia doloremque fugit iops, asperiores? Consectetur esse officia labore voluptatum blanditiis molestias dic voluptas est, minima unde sequi, praesentium dicta suscipit quisquam iure sed, nemo.</p>
-            </div>
-          </section>
         </div>
-    </div>
-  </div>
-</div>
-
-</div>
-
-<ul>  <a href="#modal1" class="price__cta"> Información </a> </ul>
-<div id="modal1" class="modalmask">
-  <div class="modalbox movedown">
-      <a href="#close" title="Close" class="close"> X </a>
-      <div class="wrapper">
-        <header>Pure CSS Tabs</header>
-        <input type="radio" name="slider" checked id="home">
-        <nav>
-          <label for="home" class="home"><i class="fas fa-home"></i>Home</label>
-        </nav>    
-        <section>
-          <div class="content content-1">
-            <div class="title">This is a Home content</div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero aspernatur nobis provident dolores molestias quia quisquam laborum, inventore quis, distinctioa, fugit repudiandae delectus sunt ipsam! Odio illo at quia doloremque fugit iops, asperiores? Consectetur esse officia labore voluptatum blanditiis molestias dic voluptas est, minima unde sequi, praesentium dicta suscipit quisquam iure sed, nemo.</p>
-          </div>
-        </section>
       </div>
-  </div>
-</div>
-</div>
 
-</div>
+      <!-- Modal 2 -->
+      <div id="modal2" class="modalmask">
+        <div class="modalbox movedown">
+          <a href="#close" title="Close" class="close">X</a>
+          <div class="wrapper">
+            <header>Stock Control</header>
+            <section>
+              <div class="content content-2">
+                <div class="title">Contáctenos</div>
+                
+Correo: StockControl24091@gmail.com
+<br><br>
+WhatsApp: +573127070540
+<br><br>
+Fijo: 5001-0720-24
+<br><br>
+Instagram: @StockControl24
+<br><br></p>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
 
-</section>
-
+      <!-- Modal 3 -->
+      <div id="modal3" class="modalmask">
+        <div class="modalbox movedown">
+          <a href="#close" title="Close" class="close">X</a>
+          <div class="wrapper">
+            <header>Stock Control</header>
+            <section>
+              <div class="content content-3">
+                <div class="title">Acerca De</div>
+                <p>Stock Control es una solución integral de gestión de inventario diseñada para facilitar el control y
+                   administración de los productos en almacenes y centros de distribución. Este sistema permite a los  usuarios llevar un seguimiento preciso de las existencias.
+                   <br><br>
+                  Alertas de reabastecimiento: Notificaciones automáticas cuando los niveles de stock alcanzan un 
+                  umbral mínimo, evitando rupturas de stock y mejorando la planificación de compras.
+                  <br><br>
+                  Seguimiento en tiempo real: Monitoreo constante de entradas y salidas de productos, ofreciendo una
+                   visión actualizada del inventario en cualquier momento.
+                   <br><br>
+                  Stock Control es ideal para empresas que buscan mejorar la eficiencia operativa, minimizar pérdidas y optimizar el espacio de almacenamiento,
+                   adaptándose a las necesidades de distintos sectores como el comercio minorista, la manufactura y la distribución.
+".</p>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div> <!-- Fin del contenedor de modales -->
+  </section>
 </header>
-
       <div class="container-login">
           <div class="wrap-login">
               <form class="login-form validate-form" id="formLogin" action="" method="post">
