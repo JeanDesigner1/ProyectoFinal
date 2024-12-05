@@ -1,4 +1,4 @@
-<?php require_once "vistas/parte_superior.php"?>
+<?php require_once "vistas/parte_superiorUSUARIOS.php"?>
 
 <!--INICIO del cont principal-->
 <div class="container">
@@ -87,4 +87,4 @@
 </div>
 <!--FIN del cont principal-->
 
-<?php require_once "vistas/parte_inferior.php"?>
+<?php require_once "vistas/parte_inferiorUSUARIOS.php"?>

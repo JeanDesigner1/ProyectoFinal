@@ -28,29 +28,21 @@ SET time_zone = "+00:00";
 -- Estructura de tabla para la tabla `personas`
 --
 
-CREATE TABLE `productos` (
+CREATE TABLE `proveedores` (
   `id` int(11) NOT NULL,
+  `idpv` int(11) NOT NULL,
   `nombre` varchar(50) COLLATE utf8_spanish_ci NOT NULL,
-  `stock` int(11) NOT NULL,
-  `price` int(100) NOT NULL
+  `correo` varchar(100) COLLATE utf8_spanish_ci NOT NULL,
+  `direccion` varchar(100) COLLATE utf8_spanish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
 -- Volcado de datos para la tabla `personas`
 --
 
-INSERT INTO `productos` (`id`, `nombre`, `stock`, `price`) VALUES
-(1, 'Samsung Galaxy S23', 52, 799),
-(2, 'iPhone 14', 48, 999),
-(3, 'Google Pixel 8', 25, 749),
-(4, 'OnePlus 11', 35, 699),
-(5, 'Xiaomi Mi 13', 28, 649),
-(6, 'Sony Xperia 1 IV', 22, 1099),
-(7, 'Motorola Edge 40', 20, 599),
-(8, 'Oppo Find X6', 41, 849),
-(9, 'Huawei P60 Pro', 30, 1099),
-(10, 'Realme GT 2 Pro', 19, 749),
-(11, 'Asus ROG Phone 6', 25, 999);
+INSERT INTO `proveedores` (`id`,`idpv`, `nombre`, `correo`, `direccion`) VALUES
+(1, 420, 'Jean Carvajal','Jean33091@gmail.com', 'CLL70 n25 30');
+
 
 --
 -- Índices para tablas volcadas
@@ -59,7 +51,8 @@ INSERT INTO `productos` (`id`, `nombre`, `stock`, `price`) VALUES
 --
 -- Indices de la tabla `personas`
 --
-ALTER TABLE `productos`
+
+ALTER TABLE `proveedores`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -69,8 +62,8 @@ ALTER TABLE `productos`
 --
 -- AUTO_INCREMENT de la tabla `personas`
 --
-ALTER TABLE `productos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+ALTER TABLE `proveedores`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

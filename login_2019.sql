@@ -28,24 +28,29 @@ SET time_zone = "+00:00";
 -- Estructura de tabla para la tabla `usuarios`
 --
 
-CREATE TABLE `admins` (
-  `id` int(11) NOT NULL,
-  `usuario` varchar(25) COLLATE utf8_spanish_ci NOT NULL,
-  `password` varchar(50) COLLATE utf8_spanish_ci NOT NULL
+-- Crear tabla `admins` con el campo `rol` incluido
+CREATE TABLE `usuarios` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `usuario` varchar(25) COLLATE utf8_spanish_ci NOT NULL UNIQUE,
+  `contrasena` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
+  `rol` int(1) NOT NULL DEFAULT 2, -- Agregamos el campo rol con un valor por defecto de 2
+  PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 -- Volcado de datos para la tabla `admins`
-INSERT INTO `admins` (`id`, `usuario`, `password`) VALUES
-(1, 'admin', '827ccb0eea8a706c4c34a16891f84e7b'),
-(2, 'demo', 'fe01ce2a7fbac8fafaed7c982a04e229');
+INSERT INTO `usuarios` (`id`, `usuario`, `contrasena`, `rol`) VALUES
+(1, 'admin', '827ccb0eea8a706c4c34a16891f84e7b', 1), -- Contraseña: 12345, rol: 1 (Administrador)
+(2, 'demo', 'fe01ce2a7fbac8fafaed7c982a04e229', 2); -- Contraseña: demo, rol: 2 (Usuario)
 
--- Añadir índices para la tabla `admins`
-ALTER TABLE `admins`
-  ADD PRIMARY KEY (`id`),
+-- Modificar índice único existente
+ALTER TABLE `usuarios`
   ADD UNIQUE KEY `usuario` (`usuario`);
 
+
+
+
 -- Modificar el campo `id` para que sea AUTO_INCREMENT
-ALTER TABLE `admins`
+ALTER TABLE `usuarios`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 COMMIT;

@@ -170,7 +170,7 @@ $("#formProductos").submit(function(e){
             categoria: categoria,
             lote: lote,
             id: id,
-            opcion: opcion,
+            
         },
         success: function (data) {
             console.log(data);

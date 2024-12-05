@@ -1,4 +1,4 @@
-<?php require_once "vistas/parte_superior.php"?>
+<?php require_once "vistas/parte_superiorUSUARIOS.php"?>
 
 <!--INICIO del cont principal-->
 <div class="container">
@@ -30,14 +30,7 @@ $data = $resultado->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
 
-<div class="container">
-        <div class="row">
-            <div class="col-lg-12">            
-            <button id="btnNuevo" type="button" class="btn btn-success" data-toggle="modal">Nuevo</button>    
-            </div>    
-        </div>    
-    </div>    
-    <br>  
+
 <div class="container">
         <div class="row">
                 <div class="col-lg-12">
@@ -56,7 +49,7 @@ $data = $resultado->fetchAll(PDO::FETCH_ASSOC);
                                 <th>Lote</th>
                                 <th>Alerta</th>
 
-                                <th>Acciones</th>
+                               
                             </tr>
                         </thead>
                         <tbody>
@@ -76,7 +69,7 @@ $data = $resultado->fetchAll(PDO::FETCH_ASSOC);
                                 <td><?php echo $dat['lote'] ?></td>  
                                 <td><?php echo $dat['alerta'] ?></td>
 
-                                <td></td>
+                                <td>No disponible</td>
                             </tr>
                             <?php
                                 }
@@ -168,4 +161,4 @@ $data = $resultado->fetchAll(PDO::FETCH_ASSOC);
 
 </div>
 <!--FIN del cont principal-->
-<?php require_once "vistas/parte_inferiorUSUARIOS.php"?>
+<?php require_once "vistas/parte_inferior.php"?>

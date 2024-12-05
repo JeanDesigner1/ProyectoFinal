@@ -1,8 +1,10 @@
 <?php require_once "vistas/parte_superior.php"?>
 
+
+
 <!--INICIO del cont principal-->
 <div class="container">
-    <h1>Página de proveedores</h1>
+    <h1>Administrar Usuarios</h1>
 
 
     <?php
@@ -10,7 +12,7 @@ include_once '../bd/conexion.php';
 $objeto = new Conexion();
 $conexion = $objeto->Conectar();
 
-$consulta = "SELECT id, idpv, nombre, correo, direccion FROM proveedores";
+$consulta = "SELECT id, usuario, contrasena , rol FROM usuarios";
 $resultado = $conexion->prepare($consulta);
 $resultado->execute();
 $data=$resultado->fetchAll(PDO::FETCH_ASSOC);
@@ -29,16 +31,15 @@ $data=$resultado->fetchAll(PDO::FETCH_ASSOC);
         <div class="row">
                 <div class="col-lg-12">
                     <div class="table-responsive">        
-                        <table id="tablaProveedores" class="table table-striped table-bordered table-condensed" style="width:100%">
+                        <table id="tablaUsuarios" class="table table-striped table-bordered table-condensed" style="width:100%">
                         <thead class="text-center">
                             <tr>
                                 <th>Id</th>
-                                <th>Id Proveedor</th>
-                                <th>Nombre</th>
-                                <th>Correo</th>                                
-                                <th>Direccion</th>
-                                <th>Acciones</th>
-                                
+                                <th>Usuario</th>
+                                <th>Contraseña</th>
+                                <th>Rol</th>
+                                <th>Opciones</th>
+                            
                             </tr>
                         </thead>
                         <tbody>
@@ -47,11 +48,10 @@ $data=$resultado->fetchAll(PDO::FETCH_ASSOC);
                             ?>
                             <tr>
                                 <td><?php echo $dat['id'] ?></td>
-                                <td><?php echo $dat['idpv'] ?></td>
-                                <td><?php echo $dat['nombre'] ?></td>
-                                <td><?php echo $dat['correo'] ?></td>
-                                <td><?php echo $dat['direccion'] ?></td> 
-                                   
+                                <td><?php echo $dat['usuario'] ?></td>
+                                <td><?php echo $dat['contrasena'] ?></td>
+                                <td><?php echo $dat['rol'] ?></td>
+                          
                                 <td></td>
                             </tr>
                             <?php
@@ -73,25 +73,22 @@ $data=$resultado->fetchAll(PDO::FETCH_ASSOC);
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
                 </button>
             </div>
-        <form id="formProveedores">    
+        <form id="formUsuarios">    
             <div class="modal-body">
-                
+    
                 <div class="form-group">
-                <label for="idpv" class="col-form-label">Id Proveedor:</label>
-                <input type="number" class="form-control" id="idpv">
-                </div>
-                <div class="form-group">
-                <label for="nombre" class="col-form-label">Nombre:</label>
-                <input type="text" class="form-control" id="nombre">
+                <label for="usuario" class="col-form-label">Usuario:</label>
+                <input type="text" class="form-control" id="usuario">
                 </div> 
                 <div class="form-group">
-                <label for="correo" class="col-form-label">Contacto:</label>
-                <input type="text" class="form-control" id="correo">
+                <label for="contrasena" class="col-form-label">Contraseña:</label>
+                <input type="number" class="form-control" id="contrasena">
                 </div>
                 <div class="form-group">
-                <label for="direccion" class="col-form-label">Direccion:</label>
-                <input type="text" class="form-control" id="direccion">
+                <label for="rol" class="col-form-label">Rol:</label>
+                <input type="number" class="form-control" id="rol">
                 </div>
+                
                 
                  
             </div>
@@ -104,8 +101,8 @@ $data=$resultado->fetchAll(PDO::FETCH_ASSOC);
     </div>
 </div>  
       
-    
+
 </div>
 <!--FIN del cont principal-->
 
-<?php require_once "vistas/parte_inferior1.php"?>
+<?php require_once "vistas/parte_inferior2.php"?>

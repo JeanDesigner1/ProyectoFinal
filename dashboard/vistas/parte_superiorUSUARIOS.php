@@ -2,7 +2,7 @@
 session_start();
 
 if($_SESSION["s_usuario"] === null){
-    header("Location: ../index.php");
+    header("Location: ../indexUSUARIOS.php");
 }
 
 ?>
@@ -43,7 +43,7 @@ if($_SESSION["s_usuario"] === null){
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
       <!-- Sidebar - Brand -->
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="indexUSUARIOS.php">
         
         <div class="sidebar-brand-text mx-3">Stock Control <sup></sup></div>
       </a>
@@ -53,7 +53,7 @@ if($_SESSION["s_usuario"] === null){
 
       <!-- Nav Item - Dashboard -->
       <li class="nav-item active">
-        <a class="nav-link" href="index.php">
+        <a class="nav-link" href="indexUSUARIOS.php">
           <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>Inicio</span></a>
       </li>
@@ -75,10 +75,10 @@ if($_SESSION["s_usuario"] === null){
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
           <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Menu:</h6>
-            <a class="collapse-item" href="analisis.php">Analisis</a>
-            <a class="collapse-item" href="reportes.php">Reportes</a>
-            <a class="collapse-item" href="AdministrarUsuarios.php">Adminstrar Usuarios</a>
-            <a class="collapse-item" href="Proveedores.php">Proveedores</a>
+            <a class="collapse-item" href="analisisUSUARIOS.php">Analisis</a>
+            <a class="collapse-item" href="reportesUSUARIOS.php">Reportes</a>
+            <a class="collapse-item" href="AdministrarUsuariosUSUARIOS.php">Adminstrar Usuarios</a>
+            <a class="collapse-item" href="ProveedoresUSUARIOS.php">Proveedores</a>
           </div>
         </div>
       </li>

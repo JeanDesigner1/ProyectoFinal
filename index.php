@@ -131,8 +131,8 @@ Instagram: @StockControl24
                       <span class="focus-efecto"></span>
                   </div>
                   
-                  <div class="wrap-input100" data-validate="Password incorrecto">
-                      <input class="input100" type="password" id="password" name="password" placeholder="Password">
+                  <div class="wrap-input100" data-validate="Contraseña incorrecto">
+                      <input class="input100" type="contrasena" id="contrasena" name="contrasena" placeholder="Contraseña">
                       <span class="focus-efecto"></span>
                   </div>
                   

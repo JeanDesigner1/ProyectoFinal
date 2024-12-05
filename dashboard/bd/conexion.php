@@ -1,7 +1,7 @@
 <?php 
 class Conexion{	  
     public static function Conectar() {        
-        define('servidor', 'localhost');
+        define('servidor', '127.0.0.1');
         define('nombre_bd', 'proyectofinal');
         define('usuario', 'root');
         define('password', '');					        
